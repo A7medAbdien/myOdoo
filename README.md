@@ -1,1 +1,1 @@
-# My own version of Odoo 😜
+# My own version of Odoo

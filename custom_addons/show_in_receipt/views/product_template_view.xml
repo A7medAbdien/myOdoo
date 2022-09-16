@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+
+        <record id="view_product_template_inherit" model="ir.ui.view">
+            <field name="name">product.template.inherit</field>
+            <field name="model">product.template</field>
+            <!-- get ref from External ID of the view you wanna add to it  -->
+            <field name="inherit_id" ref="product.product_template_only_form_view" />
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='detailed_type']" position="after">
+
+                    <field name="showInReceipt" />
+
+                </xpath>
+
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

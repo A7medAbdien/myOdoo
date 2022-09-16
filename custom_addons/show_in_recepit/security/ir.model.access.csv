@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_show_in_recepit_show_in_recepit,show_in_recepit.show_in_recepit,model_show_in_recepit_show_in_recepit,base.group_user,1,1,1,1

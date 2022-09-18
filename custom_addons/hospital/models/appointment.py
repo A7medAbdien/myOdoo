@@ -13,6 +13,10 @@ class HospitalAppointment(models.Model):
     _description = "Hospital Appointment"
     _rec_name = 'ref'
 
+    name = fields.Char(
+        string='name',
+        readonly=True
+    )
     patient_id = fields.Many2one('hospital.patient', 'Patient')
     appointment_time = fields.Datetime(
         string="Appointment Time", default=fields.Datetime.now)
@@ -36,6 +40,14 @@ class HospitalAppointment(models.Model):
     pharmacy_lines_id = fields.One2many(
         'appointment.pharmacy.lines', 'appointment_id', string='Pharmacy Lines')
     hide_sales_price = fields.Boolean(string="Hide Sales Price")
+
+    @api.model
+    def create(self, vals_list):
+        print("Odoo Metes are the best",
+              self.env['ir.sequence'].next_by_code('hospital.appointment'))
+        vals_list['name'] = self.env['ir.sequence'].next_by_code(
+            'hospital.appointment')
+        return super(HospitalAppointment, self).create(vals_list)
 
     @api.onchange('patient_id')
     def _onchange_patient_id(self):

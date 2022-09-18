@@ -55,6 +55,9 @@
         <sheet>
           <div>
             <h3>
+              <field name="name" />
+            </h3>
+            <h3>
               <field name='priority' widget='priority' />
             </h3>
           </div>

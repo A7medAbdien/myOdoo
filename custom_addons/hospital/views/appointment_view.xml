@@ -46,7 +46,7 @@
           <button type='object' data-hotkey='b' name="action_done" string='Done' class="oe_highlight" states='in_consultation' />
           <!-- button type action -->
           <!-- <button type='action' data-hotkey='n' name="%(action_cancel_appointment_wizard)d" string='Cancel' states='in_consultation,draft' context="{'default_appointment_id':active_id}" /> -->
-          <button type='action' data-hotkey='n' name="%(action_cancel_appointment_wizard)d" string='Cancel' states='in_consultation,draft' />
+          <button type='action' data-hotkey='n' name="%(action_cancel_appointment_wizard)d" string='Cancel' states='in_consultation,draft' context="{'hide_appointment': 1}" />
           <!-- button type object -->
           <!-- <button type='object' data-hotkey='n' name="action_cancel" string='Cancel' states='in_consultation,draft' /> -->
           <button type='object' data-hotkey='m' name="action_draft" string='Return' states='canceled,done' />

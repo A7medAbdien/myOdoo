@@ -17,7 +17,9 @@ class CancelAppointmentWizard(models.TransientModel):
 
     appointment_id = fields.Many2one(
         string='Appointment',
-        comodel_name='hospital.appointment'
+        comodel_name='hospital.appointment',
+        domain=[('state', '=', 'draft'), ('priority', 'in', ('0', '1', False))]
+
     )
 
     reason = fields.Text(

@@ -2034,7 +2034,7 @@ exports.Product = Backbone.Model.extend({
 });
 
 var orderline_id = 1;
-
+var NotInReceiptVal = "NotInReceipt"
 // An orderline represent one element of the content of a client's shopping cart.
 // An orderline contains a product, its quantity, its price, discount. etc.
 // An Order contains zero or more Orderlines.
@@ -2385,8 +2385,12 @@ exports.Orderline = Backbone.Model.extend({
     },
     //used to create a json of the ticket, to be sent to the printer
     export_for_printing: function(){
+        // const temp =  this.get_product().description_sale
+        // const IRV = temp.substring(0,NotInReceiptVal.length)
+        // console.log( IRV)
         return {
             id: this.id,
+            // NotInReceiptVal:    this.get_product().description_sale,
             quantity:           this.get_quantity(),
             unit_name:          this.get_unit().name,
             is_in_unit:         this.get_unit().id == this.pos.uom_unit_id,

@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!--tree view-->
+    <record model="ir.ui.view" id="view_hospital_patient_tree">
+        <field name="name">hospital patient</field>
+        <field name="model">hospital.patientg</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Patient Name"/>
+                <field name="ref"/>
+                <field name="age"/>
+                <field name="gender"/>
+            </tree>
+        </field>
+    </record>
 
+    <!--form view-->
+    <record model="ir.ui.view" id="view_hospital_patient_form">
+        <field name="name">hospital patient</field>
+        <field name="model">hospital.patientg</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="age"/>
+                        </group>
+                        <group>
+                            <field name="gender"/>
+                            <field name="ref"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- search view-->
+    <record model="ir.ui.view" id="view_hospital_patient_search">
+        <field name="name">hospital patient</field>
+        <field name="model">hospital.patientg</field>
+        <field name="arch" type="xml">
+            <search string='test'>
+                <field name="name" string="Patient Name"
+                       filter_domain="['|',('name', 'ilike', self),('ref', 'ilike', self)]"/>
+                <field name="age"/>
+                <field name="gender"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- action -->
     <record id="action_hospital_patient" model="ir.actions.act_window">
         <field name="name">Patients</field>
         <field name="type">ir.actions.act_window</field>
@@ -14,5 +64,5 @@
         </field>
     </record>
 
-    <menuitem id="menu_patient_details" name="Patients" action="action_hospital_patient" parent="menu_patient_main" />
+    <menuitem id="menu_patient_details" name="Patients" action="action_hospital_patient" parent="menu_patient_main"/>
 </odoo>

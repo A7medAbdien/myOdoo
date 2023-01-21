@@ -29,6 +29,7 @@
         'views/menu.xml',
         'views/patient_view.xml',
         'views/female_view.xml',
+        'views/appointment_view.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode

@@ -8,8 +8,9 @@ class HospitalPatient(models.Model):
     _description = "Hospital Patient G"
 
     active = fields.Boolean(string="Active", default=True)
-    name = fields.Char(string="Name")
-    age = fields.Integer(string="Age")
+    age = fields.Integer(string="Age", tracking=True)
     # list with tubules (key,value)
-    gender = fields.Selection([('male', 'Male'), ('female', 'Female')], string="Gender")
+    gender = fields.Selection(
+        [('male', 'Male'), ('female', 'Female')], string="Gender", tracking=True)
+    name = fields.Char(string="Name", tracking=True)
     ref = fields.Char(string="Recreance")

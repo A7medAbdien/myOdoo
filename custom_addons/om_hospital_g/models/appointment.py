@@ -1,4 +1,4 @@
-from odoo import models, fields, api
+from odoo import models, fields
 
 
 class HospitalAppointment(models.Model):
@@ -8,3 +8,7 @@ class HospitalAppointment(models.Model):
     _description = "Hospital Appointment G"
 
     patient_id = fields.Many2one('hospital.patientg', 'Patient', tracking=True)
+    appointment_time = fields.Datetime(
+        string="Appointment Time", default=fields.Datetime.now, tracking=True)
+    booking_date = fields.Date(
+        string="Booking Date", default=fields.Date.context_today, tracking=True)

@@ -6,6 +6,7 @@ class HospitalPatient(models.Model):
     _name = "hospital.patientg"
     _description = "Hospital Patient G"
 
+    active = fields.Boolean(string="Active", default=True)
     name = fields.Char(string="Name")
     age = fields.Integer(string="Age")
     # list with tubules (key,value)

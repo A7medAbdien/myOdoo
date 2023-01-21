@@ -46,6 +46,13 @@
                        filter_domain="['|',('name', 'ilike', self),('ref', 'ilike', self)]"/>
                 <field name="age"/>
                 <field name="gender"/>
+                <filter string="Male" name="filter_male" domain="[('gender','=','male')]"/>
+                <filter string="Female" name="filter_female" domain="[('gender','=','female')]"/>
+                <separator/>
+                <filter string="Kids" name="filter_kids" domain="[('age','&lt;=','5')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Gender" name="group_by_gender" context="{'group_by':'gender'}"/>
+                </group>
             </search>
         </field>
     </record>

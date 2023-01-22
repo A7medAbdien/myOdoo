@@ -12,3 +12,5 @@ class HospitalAppointment(models.Model):
         string="Appointment Time", default=fields.Datetime.now, tracking=True)
     booking_date = fields.Date(
         string="Booking Date", default=fields.Date.context_today, tracking=True)
+    gender = fields.Selection(related="patient_id.gender", readonly=True)
+

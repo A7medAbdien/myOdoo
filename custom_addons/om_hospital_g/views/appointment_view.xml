@@ -21,7 +21,11 @@
                         <group>
                             <field name="patient_id"/>
                         </group>
-                        <group></group>
+                        <group>
+                            <field name="gender"/>
+                        </group>
+                    </group>
+                    <group>
                         <group>
                             <field name="appointment_time"/>
                         </group>
@@ -29,7 +33,6 @@
                             <field name="booking_date"/>
                         </group>
                     </group>
-
                 </sheet>
 
                 <div class="oe_chatter">

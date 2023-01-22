@@ -38,6 +38,17 @@
                             <field name="booking_date"/>
                         </group>
                     </group>
+
+                    <!-- notebook -->
+                    <notebook>
+                        <page string="Prescription" name="prescription">
+                            <group>
+                                <field name="booking_date"/>
+                            </group>
+                        </page>
+                        <page string="Pharmacy" name="pharmacy">
+                        </page>
+                    </notebook>
                 </sheet>
 
                 <div class="oe_chatter">

@@ -25,6 +25,7 @@
                         <group>
                             <field name="name"/>
                             <field name="age"/>
+                            <field name="appointment_id"/>
                         </group>
                         <group>
                             <field name="gender"/>

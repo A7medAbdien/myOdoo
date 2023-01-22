@@ -16,6 +16,7 @@ class HospitalAppointment(models.Model):
     gender = fields.Selection(related="patient_id.gender", readonly=True)
 
     ref = fields.Char(string="Reference")
+    prescription = fields.Html(string="Prescription")
 
     @api.onchange('patient_id')
     def onchange_patient_id(self):

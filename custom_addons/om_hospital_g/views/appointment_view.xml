@@ -42,9 +42,7 @@
                     <!-- notebook -->
                     <notebook>
                         <page string="Prescription" name="prescription">
-                            <group>
-                                <field name="booking_date"/>
-                            </group>
+                            <field name="prescription" placeholder="Enter your prescription"/>
                         </page>
                         <page string="Pharmacy" name="pharmacy">
                         </page>

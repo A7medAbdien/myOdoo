@@ -6,7 +6,7 @@ class HospitalAppointment(models.Model):
     _name = "hospital.appointmentg"
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Hospital Appointment G"
-    _rec_name = "patient_id"
+    _rec_name = "ref"
 
     patient_id = fields.Many2one('hospital.patientg', 'Patient', tracking=True)
     appointment_time = fields.Datetime(

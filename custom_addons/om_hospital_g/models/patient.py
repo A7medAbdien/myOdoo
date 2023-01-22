@@ -20,6 +20,9 @@ class HospitalPatient(models.Model):
     dob = fields.Date(string="Date of Birth")
     # age = fields.Integer(string="Age", tracking=True, compute='_compute_age')
     age = fields.Integer(string="Age", tracking=True, compute='_compute_age', store=True)
+    patient_id = fields.Many2one('hospital.appointmentg', 'Appointment', tracking=True)
+
+
 
     @api.depends('dob')
     def _compute_age(self):

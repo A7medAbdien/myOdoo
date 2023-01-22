@@ -29,6 +29,7 @@
                         <group>
                             <field name="gender"/>
                             <field name="ref"/>
+                            <field name="dob"/>
                             <field name="active" invisible="1"/>
                         </group>
                     </group>
@@ -55,8 +56,8 @@
                 <field name="gender"/>
                 <filter string="Male" name="filter_male" domain="[('gender','=','male')]"/>
                 <filter string="Female" name="filter_female" domain="[('gender','=','female')]"/>
-                <separator/>
-                <filter string="Kids" name="filter_kids" domain="[('age','&lt;=','5')]"/>
+<!--                <separator/>-->
+<!--                <filter string="Kids" name="filter_kids" domain="[('age','&lt;=','5')]"/>-->
                 <separator/>
                 <filter string="Archive" name="filter_archive" domain="[('active','=',False)]"/>
                 <group expand="0" string="Group By">

@@ -22,6 +22,10 @@
             <form>
                 <!--status bar-->
                 <header>
+                    <button name="action_test" string="Object Button" type="object" class="oe_highlight"
+                            confirm='confirm massage'/>
+                    <button name="%(om_hospital_g.action_hospital_patient)d" string="Action Button" type="action"
+                            class="oe_highlight" help='this will redirect u to patient'/>
                     <field name="state"
                            widget="statusbar"
                            nolabel="1"

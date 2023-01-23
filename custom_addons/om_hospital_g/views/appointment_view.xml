@@ -16,6 +16,7 @@
                 <field name="patient_id"/>
                 <field name="gender"/>
                 <field name="activity_ids" widget='list_activity' />
+                <field name="appointment_time" optional="show" />
                 <field name="ref"/>
             </tree>
         </field>

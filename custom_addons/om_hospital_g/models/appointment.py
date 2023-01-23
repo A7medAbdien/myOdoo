@@ -23,6 +23,12 @@ class HospitalAppointment(models.Model):
         ('2', 'High'),
         ('3', 'Very High')
     ], string='Priority')
+    state = fields.Selection([
+        ('draft', 'Draft'),
+        ('in_consultation', 'In Consultation'),
+        ('done', 'Done'),
+        ('cancel', 'Cancel')
+    ], string='Status')
 
     @api.onchange('patient_id')
     def onchange_patient_id(self):

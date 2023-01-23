@@ -20,6 +20,15 @@
         <field name="model">hospital.appointmentg</field>
         <field name="arch" type="xml">
             <form>
+                <!--status bar-->
+                <header>
+                    <field name="state"
+                           widget="statusbar"
+                           nolabel="1"
+                           options="{'clickable':'1}"
+                           statusbar_visable="draft,in_consultation,done"
+                    />
+                </header>
                 <sheet>
                     <!--starts priority widget-->
                     <div class="oe_title">

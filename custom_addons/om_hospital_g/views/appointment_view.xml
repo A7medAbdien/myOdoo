@@ -33,7 +33,7 @@
             <form>
                 <!--status bar-->
                 <header>
-                    <button name="action_in_consultation" string="In Consultation" type="object" states="draft" class="oe_highlight"/>
+                    <button name="action_in_consultation" string="In Consultation" type="object" states="draft" class="oe_highlight" data-hotkey='i'/>
                     <button name="action_done" string="Done" type="object" states="in_consultation" class="oe_highlight"/>
                     <button name="action_cancel" string="Cancel" type="object" states="draft,in_consultation" />
                     <button name="action_draft" string="Draft" type="object" states="cancel" class="oe_highlight"/>

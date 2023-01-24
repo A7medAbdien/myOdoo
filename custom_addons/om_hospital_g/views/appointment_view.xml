@@ -9,7 +9,8 @@
             <tree decoration-success="state =='done'"
                   decoration-info="state =='draft'"
                   decoration-danger="state=='in_consultation'"
-                  sample='1'>
+                  sample='1'
+                  multi_edit='1'>
                 <field name="state" widget='badge'
                        decoration-success="state == 'done'"
                        decoration-info="state =='draft'"

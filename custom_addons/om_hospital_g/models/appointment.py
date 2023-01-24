@@ -30,6 +30,7 @@ class HospitalAppointment(models.Model):
         ('cancel', 'Cancel')
     ], string='Status')
     doctor_id = fields.Many2one('res.users', string='Doctor')
+    pharmacy_lines_id = fields.One2many('appointment.pharmacy.lines', 'appointment_id', string='Pharmacy Lines')
 
     @api.onchange('patient_id')
     def onchange_patient_id(self):
@@ -63,3 +64,13 @@ class HospitalAppointment(models.Model):
         # action = self.env.ref(
         #     'om+hospital_g.action_cancel_appointment_wizard').read()[0]
         # return action
+
+    class AppointmentPharmacyLines(models.Model):
+        _name = 'appointmentg.pharmacy.lines'
+        _description = 'Appointment Pharmacy Lines'
+
+        product_id = fields.Many2one('product.product', required=True)
+        price_unit = fields.Float(related='product_id.list_price')
+        qty = fields.Integer(string='Quantity', default=1)
+        appointment_id = fields.Many2one(
+            'hospital.appointmentg', string='Appointment')

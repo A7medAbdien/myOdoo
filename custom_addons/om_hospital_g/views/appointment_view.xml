@@ -33,9 +33,11 @@
             <form>
                 <!--status bar-->
                 <header>
-                    <button name="action_in_consultation" string="In Consultation" type="object" states="draft" class="oe_highlight" data-hotkey='i'/>
-                    <button name="action_done" string="Done" type="object" states="in_consultation" class="oe_highlight"/>
-                    <button name="action_cancel" string="Cancel" type="object" states="draft,in_consultation" />
+                    <button name="action_in_consultation" string="In Consultation" type="object" states="draft"
+                            class="oe_highlight" data-hotkey='i'/>
+                    <button name="action_done" string="Done" type="object" states="in_consultation"
+                            class="oe_highlight"/>
+                    <button name="action_cancel" string="Cancel" type="object" states="draft,in_consultation"/>
                     <button name="action_draft" string="Draft" type="object" states="cancel" class="oe_highlight"/>
                     <field name="state"
                            widget="statusbar"
@@ -81,7 +83,21 @@
                                     type="action"
                                     class="oe_highlight" help='this will redirect u to patient'/>
                         </page>
-                        <page string="Pharmacy" name="pharmacy">
+                        <page string='Pharmacy'>
+                            <field name="pharmacy_lines_id">
+                                <tree editable='bottom'>
+                                    <field name="product_id"/>
+                                    <field name="price_unit"/>
+                                    <field name="qty"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="product_id"/>
+                                        <field name="price_unit"/>
+                                        <field name="qty"/>
+                                    </group>
+                                </form>
+                            </field>
                         </page>
                     </notebook>
                 </sheet>

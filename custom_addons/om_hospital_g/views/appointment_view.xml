@@ -64,7 +64,7 @@
                             <field name="appointment_time"/>
                         </group>
                         <group>
-                            <field name="booking_date"/>
+                            <field name="booking_date" default_focus="1"/>
                         </group>
                     </group>
 

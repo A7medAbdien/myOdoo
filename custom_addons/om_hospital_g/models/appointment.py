@@ -44,3 +44,22 @@ class HospitalAppointment(models.Model):
                 'type': 'rainbow_man',
             }
         }
+
+    def action_draft(self):
+        for rec in self:
+            rec.state = 'draft'
+
+    def action_in_consultation(self):
+        for rec in self:
+            rec.state = 'in_consultation'
+
+    def action_done(self):
+        for rec in self:
+            rec.state = 'done'
+
+    def action_cancel(self):
+        for rec in self:
+            rec.state = 'cancel'
+        # action = self.env.ref(
+        #     'om+hospital_g.action_cancel_appointment_wizard').read()[0]
+        # return action

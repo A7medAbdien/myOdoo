@@ -33,10 +33,10 @@
             <form>
                 <!--status bar-->
                 <header>
-                    <button name="action_test" string="Object Button" type="object" class="oe_highlight"
-                            confirm='confirm massage'/>
-                    <button name="%(om_hospital_g.action_hospital_patient)d" string="Action Button" type="action"
-                            class="oe_highlight" help='this will redirect u to patient'/>
+                    <button name="action_in_consultation" string="In Consultation" type="object" states="draft" class="oe_highlight"/>
+                    <button name="action_done" string="Done" type="object" states="in_consultation" class="oe_highlight"/>
+                    <button name="action_cancel" string="Cancel" type="object" states="draft,in_consultation" />
+                    <button name="action_draft" string="Draft" type="object" states="cancel" class="oe_highlight"/>
                     <field name="state"
                            widget="statusbar"
                            nolabel="1"
@@ -75,6 +75,11 @@
                         <page string="Prescription" name="prescription">
                             <field name="prescription" placeholder="Enter your prescription"
                                    options="{'collaborative': true, 'resizable': true}"/>
+                            <button name="action_test" string="Object Button" type="object" class="oe_highlight"
+                                    confirm='confirm massage'/>
+                            <button name="%(om_hospital_g.action_hospital_patient)d" string="Action Button"
+                                    type="action"
+                                    class="oe_highlight" help='this will redirect u to patient'/>
                         </page>
                         <page string="Pharmacy" name="pharmacy">
                         </page>

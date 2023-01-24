@@ -8,7 +8,8 @@
         <field name="arch" type="xml">
             <tree decoration-success="state =='done'"
                   decoration-info="state =='draft'"
-                  decoration-danger="state=='in_consultation'">
+                  decoration-danger="state=='in_consultation'"
+                  sample='1'>
                 <field name="state" widget='badge'
                        decoration-success="state == 'done'"
                        decoration-info="state =='draft'"
@@ -16,8 +17,8 @@
                 <field name="patient_id"/>
                 <field name="doctor_id" widget="many2one_avatar_user"/>
                 <field name="gender"/>
-                <field name="activity_ids" widget='list_activity' />
-                <field name="appointment_time" optional="show" />
+                <field name="activity_ids" widget='list_activity'/>
+                <field name="appointment_time" optional="show"/>
                 <field name="ref"/>
             </tree>
         </field>

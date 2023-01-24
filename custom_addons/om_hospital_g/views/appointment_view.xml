@@ -65,6 +65,7 @@
                     </group>
                     <group>
                         <group>
+                            <field name="hide_sales_price"/>
                             <field name="appointment_time"/>
                         </group>
                         <group>
@@ -87,13 +88,15 @@
                             <field name="pharmacy_lines_id">
                                 <tree editable='bottom'>
                                     <field name="product_id"/>
-                                    <field name="price_unit"/>
+                                    <field name="price_unit"
+                                           attrs="{ 'column_invisible':[('parent.hide_sales_price','=',True)] }"/>
                                     <field name="qty"/>
                                 </tree>
                                 <form>
                                     <group>
                                         <field name="product_id"/>
-                                        <field name="price_unit"/>
+                                        <field name="price_unit"
+                                               attrs="{ 'column_invisible':[('parent.hide_sales_price','=',True)] }"/>
                                         <field name="qty"/>
                                     </group>
                                 </form>

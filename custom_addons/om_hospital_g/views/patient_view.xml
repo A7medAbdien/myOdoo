@@ -27,6 +27,7 @@
                             <field name="name"/>
                             <field name="age"/>
                             <field name="appointment_id"/>
+                            <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
                         </group>
                         <group>
                             <field name="gender"/>

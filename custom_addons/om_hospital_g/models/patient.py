@@ -22,7 +22,10 @@ class HospitalPatient(models.Model):
     age = fields.Integer(string="Age", tracking=True, compute='_compute_age', store=True)
     appointment_id = fields.Many2one('hospital.appointmentg', 'Appointment', tracking=True)
     image = fields.Image(string='Image')
-
+    tag_ids = fields.Many2many(
+        string='Tag',
+        comodel_name='patient.tagg'
+    )
 
 
     @api.depends('dob')

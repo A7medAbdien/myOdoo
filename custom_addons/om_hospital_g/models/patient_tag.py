@@ -14,3 +14,11 @@ class PatientTag(models.Model):
         string='Active',
         default=True
     )
+
+    color = fields.Integer(
+        string='Color',
+    )
+
+    color2 = fields.Char(
+        string='Color2',
+    )

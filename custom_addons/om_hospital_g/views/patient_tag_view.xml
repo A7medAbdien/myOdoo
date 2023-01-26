@@ -22,6 +22,8 @@
                         </group>
                         <group>
                             <field name="active" widget="boolean_toggle"/>
+                            <field name="color"  widget="color_picker" groups="base.group_no_one"/>
+                            <field name="color2"  widget="color"/>
                         </group>
                     </group>
                 </sheet>

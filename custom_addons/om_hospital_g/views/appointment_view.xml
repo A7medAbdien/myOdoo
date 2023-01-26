@@ -75,7 +75,7 @@
                     <notebook>
                         <page string="Prescription" name="prescription">
                             <field name="prescription" placeholder="Enter your prescription"
-                                   options="{'collaborative': true, 'resizable': true}"/>
+                                   options="{'codeview': true, 'collaborative': true, 'resizable': true}"/>
                         </page>
                         <page string='Pharmacy'>
                             <field name="pharmacy_lines_id">
@@ -108,12 +108,33 @@
         </field>
     </record>
 
+    <!-- activity view-->
+    <record model="ir.ui.view" id="view_hospital_appointment_activity">
+        <field name="name">hospital.appointmentg.activity</field>
+        <field name="model">hospital.appointmentg</field>
+        <field name="arch" type="xml">
+            <activity string='Appointment'>
+                <field name="patient_id"/>
+                <field name="ref"/>
+                <templates>
+                    <div t-name="activity-box">
+                        <img t-att-src="activity_image('hospital.patient','image',record.patient_id.raw_value)"
+                             t-att-title="record.patient_id.value" t-att-alt="record.patient_id.value"/>
+                        <div>
+                            <field name="ref"/>
+                        </div>
+                    </div>
+                </templates>
+            </activity>
+        </field>
+    </record>
+
     <!-- action -->
     <record id="action_hospital_appointment" model="ir.actions.act_window">
         <field name="name">appointments</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hospital.appointmentg</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,activity</field>
         <field name="context">{}</field>
         <field name="help" type='html'>
             <p class='o_view_nocontent_smiling_face'>

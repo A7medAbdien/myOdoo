@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import models, patient, appointment
+from . import models, patient, appointment, patient_tag

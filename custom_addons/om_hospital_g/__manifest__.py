@@ -31,6 +31,7 @@
         'views/female_view.xml',
         'views/appointment_view.xml',
         'views/templates.xml',
+        'views/patient_tag_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

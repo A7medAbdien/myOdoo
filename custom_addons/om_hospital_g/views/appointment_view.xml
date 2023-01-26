@@ -57,32 +57,25 @@
                         <group>
                             <field name="patient_id"/>
                             <field name="doctor_id" widget="many2one_avatar"/>
+                            <field name="appointment_time"/>
+                            <field name="hide_sales_price" groups="base.group_no_one"/>
                         </group>
                         <group>
                             <field name="gender"/>
                             <field name="ref"/>
-                        </group>
-                    </group>
-                    <group>
-                        <group>
-                            <field name="hide_sales_price"/>
-                            <field name="appointment_time"/>
-                        </group>
-                        <group>
                             <field name="booking_date" default_focus="1"/>
-                        </group>
-                    </group>
-
-                    <!-- notebook -->
-                    <notebook>
-                        <page string="Prescription" name="prescription">
-                            <field name="prescription" placeholder="Enter your prescription"
-                                   options="{'collaborative': true, 'resizable': true}"/>
                             <button name="action_test" string="Object Button" type="object" class="oe_highlight"
                                     confirm='confirm massage'/>
                             <button name="%(om_hospital_g.action_hospital_patient)d" string="Action Button"
                                     type="action"
                                     class="oe_highlight" help='this will redirect u to patient'/>
+                        </group>
+                    </group>
+                    <!-- notebook -->
+                    <notebook>
+                        <page string="Prescription" name="prescription">
+                            <field name="prescription" placeholder="Enter your prescription"
+                                   options="{'collaborative': true, 'resizable': true}"/>
                         </page>
                         <page string='Pharmacy'>
                             <field name="pharmacy_lines_id">

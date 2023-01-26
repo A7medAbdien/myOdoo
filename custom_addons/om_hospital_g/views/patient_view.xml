@@ -21,6 +21,7 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <field name="image" widget='image' class="oe_avatar"/>
                     <group>
                         <group>
                             <field name="name"/>
@@ -57,8 +58,8 @@
                 <field name="gender"/>
                 <filter string="Male" name="filter_male" domain="[('gender','=','male')]"/>
                 <filter string="Female" name="filter_female" domain="[('gender','=','female')]"/>
-<!--                <separator/>-->
-<!--                <filter string="Kids" name="filter_kids" domain="[('age','&lt;=','5')]"/>-->
+                <!--                <separator/>-->
+                <!--                <filter string="Kids" name="filter_kids" domain="[('age','&lt;=','5')]"/>-->
                 <separator/>
                 <filter string="Archive" name="filter_archive" domain="[('active','=',False)]"/>
                 <group expand="0" string="Group By">

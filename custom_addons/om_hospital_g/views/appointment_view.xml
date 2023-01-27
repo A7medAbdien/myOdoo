@@ -144,5 +144,5 @@
     </record>
 
     <menuitem id="menu_appointment_details" name="Appointments" action="action_hospital_appointment"
-              parent="menu_hospital_main"/>
+              parent="menu_appointment_main"/>
 </odoo>

@@ -60,11 +60,11 @@ class HospitalAppointment(models.Model):
             rec.state = 'done'
 
     def action_cancel(self):
-        for rec in self:
-            rec.state = 'cancel'
-        # action = self.env.ref(
-        #     'om+hospital_g.action_cancel_appointment_wizard').read()[0]
-        # return action
+        # for rec in self:
+        #     rec.state = 'cancel'
+        action = self.env.ref(
+            'om_hospital_g.action_cancel_appointment_wizard').read()[0]
+        return action
 
 
 class AppointmentPharmacyLines(models.Model):

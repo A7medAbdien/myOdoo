@@ -25,6 +25,8 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'data/patient_tagg_data.xml',
+        'data/patient.tagg.csv',
         'views/views.xml',
         'wizard/cancel_appointment_wizard.xml',
         'views/menu.xml',

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+  <record id="patient_tag_vip" model="patient.tagg">
+    <field name="name">VIP</field>
+  </record>
+
+  <record id="patient_tag_kidoo" model="patient.tagg">
+    <field name="name">KIDoo</field>
+  </record>
+
+  <record id="patient_tag_master" model="patient.tagg">
+    <field name="name">Master</field>
+    <field name="active" eval="False" />
+  </record>
+
+</odoo>

@@ -1,0 +1,4 @@
+id,name,active
+patient_tag_ASAP,ASAP,True
+patient_tag_NASAP,NASAP,False
+patient_tag_NASAA,NASAAA,True

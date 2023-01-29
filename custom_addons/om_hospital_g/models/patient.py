@@ -42,3 +42,10 @@ class HospitalPatient(models.Model):
                 rec.age = today.year - rec.dob.year
             else:
                 rec.age = 1
+
+    @api.model
+    def create(self, vals_list):
+        curr_seq = self.env['ir.sequence'].next_by_code('hospital.patientg')
+        print("Odoo Metes are the best", curr_seq)
+        vals_list['ref'] = curr_seq
+        return super(HospitalPatient, self).create(vals_list)

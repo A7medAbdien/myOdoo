@@ -49,3 +49,10 @@ class HospitalPatient(models.Model):
         print("Odoo Metes are the best", curr_seq)
         vals_list['ref'] = curr_seq
         return super(HospitalPatient, self).create(vals_list)
+
+    def write(self, vals):
+        print('write trigger when we edit', vals)
+        if not self.ref and not vals.get('ref'):
+            self.ref = self.env['ir.sequence'].next_by_code(
+                'hospital.patientg')
+        return super(HospitalPatient, self).write(vals)

@@ -56,3 +56,11 @@ class HospitalPatient(models.Model):
             self.ref = self.env['ir.sequence'].next_by_code(
                 'hospital.patientg')
         return super(HospitalPatient, self).write(vals)
+
+    def name_get(self):
+        # result = []
+        # for record in self:
+        #     name = '[' + record.ref + '] ' + record.name
+        #     result.append((record.id, name))
+        # return result
+        return [(record.id, "[%s] %s" % (record.ref, record.name)) for record in self]

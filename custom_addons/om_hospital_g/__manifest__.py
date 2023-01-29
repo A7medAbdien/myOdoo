@@ -36,6 +36,7 @@
         'views/appointment_view.xml',
         'views/templates.xml',
         'views/patient_tag_view.xml',
+        'views/odoo_playground_view.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

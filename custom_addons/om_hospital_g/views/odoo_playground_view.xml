@@ -25,7 +25,8 @@
         <field name="name">Play Ground</field>
         <field name="res_model">odoo.playgroundg</field>
         <field name="view_mode">form</field>
-        <field name="target">inline</field>
+<!--        <field name="target">current</field>-->
+        <field name="target">new</field>
         <field name="type">ir.actions.act_window</field>
     </record>
 
